@@ -7,6 +7,8 @@
 @description 
 @createDate 2023/5/10 10:23
 """
+import jsonlines
+
 import graph
 import numpy as np
 
@@ -40,13 +42,23 @@ if __name__ == '__main__':
     hub = standard(hub)
     auth = standard(auth)
 
-    iter_k = 3
+    domains = []
+    f = jsonlines.open('domains.jsonl', 'r')
+    for l in f:
+        domains.append(l['domain'])
+
+    phrase = []
+    f = jsonlines.open('phrase.jsonl', 'r')
+    for l in f:
+        phrase.append(l["phrase"])
+
+    iter_k = 10
     for i in range(iter_k):
         auth, hub = iterate(hub, matrix)
         print("iter:", i)
-        print(np.argmax(auth))
+        print("最热短语：", phrase[np.argmax(auth)])
         print(auth.max())
-        print(np.argmax(hub))
+        print("最热网站", domains[np.argmax(hub)])
         print(hub.max())
 
 
