@@ -50,7 +50,7 @@
 
 
 
-此时我们已经准备好了算法所需的数据。
+此时我们已经准备好了算法所需的数据：hub, auth, M。
 
 
 
@@ -119,3 +119,11 @@ iter: 9
 ```
 
  
+
+过程中出现的热词，joe the plumber，是2008美国大选时的一个名人；saturday night live是当时美国热门的一个电视节目。
+
+网站blog.myspace.com，是当时最流行的社交网站，这符合我们的预期。
+
+## 结论
+
+HITS算法通过网站与热词直接的联系，分析出了2008年间最流行的网站blog.myspace.com，以及最流行的热词saturday night live，具有一定的实际意义。
