@@ -48,7 +48,7 @@ def load_articles():
 def get_graph():
     domain_map = load_domain()
     phrase_map = load_phrase()
-    article_domain_map = load_articles()
+    article_domain_list = load_articles()
 
     hub_size = len(domain_map)
     auth_size = len(phrase_map)
@@ -62,7 +62,7 @@ def get_graph():
         phrase = line['phrase']
         phrase_id = phrase_map[phrase]
 
-        domain = article_domain_map[article_id]
+        domain = article_domain_list[article_id]
         domain_id = domain_map[domain]
 
         matrix[domain_id, phrase_id] = 1

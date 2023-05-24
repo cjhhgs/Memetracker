@@ -18,7 +18,7 @@ def get_domain_by_urllib(url):
     return domain
 
 
-article_size = 100000
+article_size = 50000
 
 
 if __name__ == '__main__':

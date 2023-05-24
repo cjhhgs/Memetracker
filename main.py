@@ -52,7 +52,7 @@ if __name__ == '__main__':
     for l in f:
         phrase.append(l["phrase"])
 
-    iter_k = 10
+    iter_k = 20
     for i in range(iter_k):
         auth, hub = iterate(hub, matrix)
         print("iter:", i)
